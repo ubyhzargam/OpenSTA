@@ -59,6 +59,7 @@ STA for clock period of 1000 - <br>
 Clearly, both hold and setup constraints are met.<br>
 Let us reduce the clock period in SDC file to 5 and see what happens <br>
 <img width="477" alt="Screenshot 2024-11-22 at 2 24 11 PM" src="https://github.com/user-attachments/assets/6e8095f6-f1f6-40e5-8f1d-6cbb28ea1083">
+<br>
 As you can see the hold constraint is met but the setup contraint is violated as setup slack is negative which means that the required time is lesser than the arrival time <br>
 
 

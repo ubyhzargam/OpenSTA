@@ -61,5 +61,9 @@ Let us reduce the clock period in SDC file to 5 and see what happens <br>
 <img width="477" alt="Screenshot 2024-11-22 at 2 24 11 PM" src="https://github.com/user-attachments/assets/6e8095f6-f1f6-40e5-8f1d-6cbb28ea1083">
 <br>
 As you can see the hold constraint is met but the setup contraint is violated as setup slack is negative which means that the required time is lesser than the arrival time <br>
-
+<br>
+Not just this, we can also do power estimation using OpenSTA. We have to specify input_transition and output load for all inputs and outputs in sdc file and set activity factor in tcl script and then add the command report_power to the tcl script and it will give u the power analysis as shown : <br>
+<img width="524" alt="Screenshot 2024-11-22 at 10 12 28 PM" src="https://github.com/user-attachments/assets/479e59b4-3a6a-424f-9726-57103bdfc145">
+<br>
+<br>
 

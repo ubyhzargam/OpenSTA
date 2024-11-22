@@ -49,3 +49,16 @@ report_checks -path_delay min -format full<br>
 I got the following timing reports on the terminal : <br>
 <img width="503" alt="Screenshot 2024-11-22 at 10 57 34 AM" src="https://github.com/user-attachments/assets/8a036563-de1c-4611-b0bf-df95175c2e9f">
 
+# FSM2
+Technology mapped netlist - <br>
+<img width="1466" alt="Screenshot 2024-11-22 at 2 21 12 PM" src="https://github.com/user-attachments/assets/6b5ab56d-eb63-4bd1-8512-fcbd9feedacd">
+<br>
+STA for clock period of 1000 - <br>
+<img width="467" alt="Screenshot 2024-11-22 at 2 22 47 PM" src="https://github.com/user-attachments/assets/d2e521f4-f084-4045-a1b8-91bae644c1b5">
+<br> 
+Clearly, both hold and setup constraints are met.<br>
+Let us reduce the clock period in SDC file to 5 and see what happens <br>
+<img width="477" alt="Screenshot 2024-11-22 at 2 24 11 PM" src="https://github.com/user-attachments/assets/6e8095f6-f1f6-40e5-8f1d-6cbb28ea1083">
+As you can see the hold constraint is met but the setup contraint is violated as setup slack is negative which means that the required time is lesser than the arrival time <br>
+
+

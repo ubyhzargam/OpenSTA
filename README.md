@@ -67,3 +67,33 @@ Not just this, we can also do power estimation using OpenSTA. We have to specify
 <br>
 <br>
 
+
+# Timer
+Technology mapped netlist - <br>
+<img width="1470" alt="Screenshot 2024-11-25 at 1 44 48 AM" src="https://github.com/user-attachments/assets/63cf2ed3-b2d7-4cdf-b172-f4ed12a1586f">
+<br>
+STA for clock period of 5 - <br>
+<img width="532" alt="Screenshot 2024-11-25 at 1 49 45 AM" src="https://github.com/user-attachments/assets/14183037-6b8c-4cfc-9c77-e66e6cbeb90f"><br>
+Clearly, setup violation exists. To overcome this we can increase clock period <br>
+STA after increasing the clock period to 10 - <br>
+<img width="532" alt="Screenshot 2024-11-25 at 1 51 24 AM" src="https://github.com/user-attachments/assets/7eb3093d-54b2-4a27-b326-57c528b1fe33"><br>
+Now, both setup and hold constraints are met. <br>
+Power analysis using OpenSTA tool - <br>
+<img width="532" alt="Screenshot 2024-11-25 at 1 52 21 AM" src="https://github.com/user-attachments/assets/7a73b4e7-43a3-4535-94c2-22abf6bdaa6f"><br>
+Having done this, we know that there are variations due to process parameters in the timing, what can we do to overcome this. One way is to consider a worst case but this would be pessimistic. Another way, is to perform multimode multicorner(MMMC) analysis and peform timing analysis for all corners (Process, RC parasitics). Now , let us read 3 liberty files in tcl file which are - read_liberty - <br>
+lib NangateOpenCellLibrary_typical.lib <br>
+read_liberty -lib NangateOpenCellLibrary_slow.lib <br>
+read_liberty -lib NangateOpenCellLibrary_fast.lib <br>
+We get the following results for typical - <br>
+<img width="530" alt="Screenshot 2024-11-25 at 2 00 40 AM" src="https://github.com/user-attachments/assets/10c2ae66-83cc-4060-b5f7-e4be0d8e0495"> <br>
+We get the following results for slow - <br>
+<img width="530" alt="Screenshot 2024-11-25 at 2 01 11 AM" src="https://github.com/user-attachments/assets/5321d8c9-67f8-4f4c-850e-8b135997fa58"> <br>
+As you can see the results greatly vary <br>
+Now , let us see the results for fast - <br>
+<img width="534" alt="Screenshot 2024-11-25 at 2 01 55 AM" src="https://github.com/user-attachments/assets/1ac34494-69e8-430e-bea3-ce6da7a34210">
+<br>
+All these reports are generated at once without performing the analysis again and again, so using this method we can generate the timing reports for various processes. Clearly, fast is better than typical which is better than slow. These are NLDM (Non linear delay modelling). For accurate analysis we can also use Composite current source (CCS) and Effective current source(CCS) libraries. <br>
+
+
+
+

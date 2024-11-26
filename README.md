@@ -115,11 +115,16 @@ Slow process - <br>
 <br>
 <br><br>
 Typical process - <br>
+<img width="519" alt="Screenshot 2024-11-26 at 5 22 24 PM" src="https://github.com/user-attachments/assets/f6dc8b0e-0297-4916-a0f1-dc1f88c81e88">
 <br>
+<img width="530" alt="Screenshot 2024-11-26 at 5 22 44 PM" src="https://github.com/user-attachments/assets/e008f73e-fb26-4e13-85e0-8b6cafa02fe0">
 <br><br>
 Fast process - <br>
+<img width="496" alt="Screenshot 2024-11-26 at 5 23 06 PM" src="https://github.com/user-attachments/assets/abce84a1-2fec-4265-a617-0cf2628bcd60">
 <br>
-<br><br>
+<img width="554" alt="Screenshot 2024-11-26 at 5 23 28 PM" src="https://github.com/user-attachments/assets/d9356cad-5900-40d9-b973-ac98a5f77c15">
+<br>
+<br>
 <br>
 Now , let us see if the hold and setup time of the elements changes if I change the input and clock slew. As we know the setup and hold time of elements depends on the input and clock slew, let me change input and clock slew in the sdc file and let us compare with previous result of typical library - <br>
 <img width="526" alt="Screenshot 2024-11-26 at 5 18 51 PM" src="https://github.com/user-attachments/assets/993d6bab-77cc-410a-98aa-2c5c83f71acb">

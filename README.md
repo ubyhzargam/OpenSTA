@@ -132,7 +132,8 @@ Now , let us see if the hold and setup time of the elements changes if I change 
 As you can see , the library setup time has changed slightly when i changed the sdc command from set_input_transition 0.3[get_ports i] to set_input_transition 0.6[get_ports i]. Even for such minute change in input slew, the library setup time is affected <br><br>
 Now let us use CCS (Composite current source - typical library) and see what changes <br>
 First let us perform tech mapping - <br>
-<img width="853" alt="Screenshot 2024-11-26 at 6 05 59 PM" src="https://github.com/user-attachments/assets/62a7c13b-5ec8-4b25-8de0-cb91e0f16319">
+<img width="853" alt="Screenshot 2024-11-26 at 6 05 59 PM" src="https://github.com/user-attachments/assets/62a7c13b-5ec8-4b25-8de0-cb91e0f16319"><br>
+As expected the technology mapping remains the same as the cells are still the same , the way of calculating delay and power has changed from NLDM which was previously used <br>
 <br>
 <br>
 Now let us generate timing reports - <br>

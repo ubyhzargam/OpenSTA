@@ -130,6 +130,17 @@ Now , let us see if the hold and setup time of the elements changes if I change 
 <img width="526" alt="Screenshot 2024-11-26 at 5 18 51 PM" src="https://github.com/user-attachments/assets/993d6bab-77cc-410a-98aa-2c5c83f71acb">
 <br>
 As you can see , the library setup time has changed slightly when i changed the sdc command from set_input_transition 0.3[get_ports i] to set_input_transition 0.6[get_ports i]. Even for such minute change in input slew, the library setup time is affected <br><br>
-
+Now let us use CCS (Composite current source - typical library) and see what changes <br>
+First let us perform tech mapping - <br>
+<img width="853" alt="Screenshot 2024-11-26 at 6 05 59 PM" src="https://github.com/user-attachments/assets/62a7c13b-5ec8-4b25-8de0-cb91e0f16319">
+<br>
+<br>
+Now let us generate timing reports - <br>
+I got a lot of warning messages as OpenSTA does not support 'when' attributes, so wherever there is when attribute in the library i got a warning - <br>
+<img width="853" alt="Screenshot 2024-11-26 at 6 12 12 PM" src="https://github.com/user-attachments/assets/af0763b1-58c4-4037-bd1b-3f0391f43500"><br>
+I got the following timing report after the warnings - <br>
+<img width="496" alt="Screenshot 2024-11-26 at 6 13 09 PM" src="https://github.com/user-attachments/assets/8d2ca5ce-aaa1-463d-92ee-8fd7ead0b2e1">
+<br>
+<br>
 
 

@@ -97,6 +97,34 @@ Now , let us see the results for fast - <br>
 All these reports are generated at once without performing the analysis again and again, so using this method we can generate the timing reports for various processes. Clearly, fast is better than typical which is better than slow. These are NLDM (Non linear delay modelling). For accurate analysis we can also use Composite current source (CCS) and Effective current source(CCS) libraries. <br>
 
 <img width="711" alt="Screenshot 2024-11-25 at 2 05 23 AM" src="https://github.com/user-attachments/assets/3edc347f-6685-4bd1-9c62-77e548d1ee09">
+<br>
+<br>
+
+# Design1
+Technology mapped netlist - <br>
+<img width="856" alt="Screenshot 2024-11-26 at 4 57 29 PM" src="https://github.com/user-attachments/assets/21e88b22-586a-4fc4-908a-3ee8012ee065">
+<br>
+<br>
+Area of the circuit obtained from library - <br>
+<img width="449" alt="Screenshot 2024-11-26 at 4 59 50 PM" src="https://github.com/user-attachments/assets/08d0b427-cb95-40cd-8a04-dcd697908e95">
+<br>
+<br>
+Now, let us perform MMMC on slow, typical and fast processes and see the timing reports for the above design - <br>
+Slow process - <br>
+<img width="489" alt="Screenshot 2024-11-26 at 5 09 36 PM" src="https://github.com/user-attachments/assets/be8fd5b8-77b7-4da9-b723-f0ffaad9c7fa">
+<br>
+<br><br>
+Typical process - <br>
+<br>
+<br><br>
+Fast process - <br>
+<br>
+<br><br>
+<br>
+Now , let us see if the hold and setup time of the elements changes if I change the input and clock slew. As we know the setup and hold time of elements depends on the input and clock slew, let me change input and clock slew in the sdc file and let us compare with previous result of typical library - <br>
+<img width="526" alt="Screenshot 2024-11-26 at 5 18 51 PM" src="https://github.com/user-attachments/assets/993d6bab-77cc-410a-98aa-2c5c83f71acb">
+<br>
+As you can see , the library setup time has changed slightly when i changed the sdc command from set_input_transition 0.3[get_ports i] to set_input_transition 0.6[get_ports i]. Even for such minute change in input slew, the library setup time is affected <br><br>
 
 
 

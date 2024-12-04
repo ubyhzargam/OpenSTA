@@ -1,5 +1,6 @@
 # These are the results of OpenSTA software on the above verilog codes: 
 
+This repository aims to generate timing reports of several circuits and on the path we will also learn how to write constraints(clock constraints, delay constraints, environment constraints and so on) in sdc (Synopsys design constraints) file, we will also learn how to use various modelling techniques (NLDM,ECS,CCS,etc). We then will proceed to see how process (slow, fast,typical ) affects the timing of circuits and then finally we will perform MMMC and then finish the goal of learning how to generate timing reports.<br>
 # Circuit1
 <img width="503" alt="Screenshot 2024-11-17 at 3 37 45 AM" src="https://github.com/user-attachments/assets/3074fcef-b660-4f93-86b4-98ecf919df62">
 <br>

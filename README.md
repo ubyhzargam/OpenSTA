@@ -145,4 +145,31 @@ I got the following timing report after the warnings - <br>
 <br>
 <br>
 
+# Edge detector
+Technology mapped netlist - <br>
+<img width="837" alt="Screenshot 2024-12-05 at 1 46 39 AM" src="https://github.com/user-attachments/assets/8946a420-9906-42c7-a53f-5467a73b7a55">
+<br>
+<br>
+Area of the circuit obtained from library - <br>
+<img width="589" alt="Screenshot 2024-12-05 at 1 47 39 AM" src="https://github.com/user-attachments/assets/f5151ad5-7588-4a2e-8f73-a8f4741cfaf2">
+<br>
+<br>
+Now, I wont be performing MMMC , that has already been demonstrated in previous examples, in this example we will be seeing how changing output capacitance affects delay and power. Also, let us change other parameters and see how those affect library setup time,library hold time, delay and power.<br>
+If i have these constraints on my sdc - <br>
+Clock period - 10 ; input delay - 5, output delay - 10; input transtion - 0.6; load - 0.2 <br> 
+For the above constraints let us generate timing reports - <br><img width="643" alt="Screenshot 2024-12-05 at 1 59 28 AM" src="https://github.com/user-attachments/assets/88a1365f-ac17-4d44-b80a-3e871ca7dac6">
+<br>
+Both setup and hold constraints are met. <br>
+<img width="693" alt="Screenshot 2024-12-05 at 2 00 03 AM" src="https://github.com/user-attachments/assets/372416dc-dcec-4a3d-85ff-3c5d8f365918">
+<br>
+And we get power as shown above. Now, let us change the transition of input that is activity factor and increase it to 0.9 from 0.6 keeping the other things constant. From theory we expect that dynamic power dissipation will increase, increasing the total power but leakage and other power dissipation should stay constant. Let us see the results - <br><img width="693" alt="Screenshot 2024-12-05 at 2 00 27 AM" src="https://github.com/user-attachments/assets/a8564603-55e7-4704-89af-7b78f783e9d9">
+<br>
+These are as expected. Now let us keep switching activity of input port at 0.9 and change output load from 0.2 to 4 and see how it affects our power. Theoretically again leakage power will never be affected, dynamic power will go up as larger the capacitance more is the effort to switch it from one logic level to another. <br>
+<img width="693" alt="Screenshot 2024-12-05 at 2 02 12 AM" src="https://github.com/user-attachments/assets/5ea6030f-1961-4b2c-bddd-736e0749307d">
+<br>
+Clearly, this is exactly what we expected it to be. Now let us change back the constraints to what they were originally. Now let us change the input delay to 15, we expect setup slack to be affected in a negative manner. Let us see the results - <br>
+<img width="619" alt="Screenshot 2024-12-05 at 2 05 18 AM" src="https://github.com/user-attachments/assets/003df83c-8f03-4673-831d-eba2db0c46c0"><br>
+Clearly, the setup slack has been violated.
+
+
 

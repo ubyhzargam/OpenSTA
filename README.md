@@ -171,5 +171,7 @@ Clearly, this is exactly what we expected it to be. Now let us change back the c
 <img width="619" alt="Screenshot 2024-12-05 at 2 05 18 AM" src="https://github.com/user-attachments/assets/003df83c-8f03-4673-831d-eba2db0c46c0"><br>
 Clearly, the setup slack has been violated.
 
-
+<br><br>  
+# This is the end of repository, the learning about OpenSTA is complete. After this point it is very easy to go look up their doc and read what individual command does and then use it. With this knowledge, it should be easy to generate timing reports and analyse power for various circuits.....
+<br><br>
 
